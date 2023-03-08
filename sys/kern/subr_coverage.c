@@ -101,6 +101,7 @@ __sanitizer_cov_trace_pc(void)
 
 	trace_pc = atomic_load_ptr(&cov_trace_pc);
 	if (trace_pc != NULL)
+		// -->
 		trace_pc((uint64_t)__builtin_return_address(0));
 }
 
